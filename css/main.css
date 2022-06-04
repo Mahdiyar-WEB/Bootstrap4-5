@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+:root {
+  --mainBlue: #40acf1;
+  --transparentBlue: rgba(64, 172, 241, 0.7);
+  --mainWhite: #ffffff;
+  --mainBlack: #292f36;
+  --mainGrey: rgb(216, 214, 214);
+  --mainYellow: #e3b505;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  overflow-x: hidden;
+}
+/* navbar */
+.social a {
+  font-size: 20px;
+}
+.navbar-toggler {
+  color: var(--mainBlue) !important;
+  font-size: 1.3rem;
+}
+.nav-link:hover {
+  color: var(--mainBlue) !important;
+}
+.navbar-brand img {
+  transition: all 0.6s ease !important;
+}
+.navbar-brand img:hover {
+  transform: rotate(100deg);
+}
+/* header */
+.header {
+  color: var(--mainWhite);
+  overflow: hidden;
+  clip-path: polygon(
+    0 1%,
+    100% 0,
+    100% 30%,
+    100% 93%,
+    50% 100%,
+    50% 100%,
+    0 93%,
+    0% 30%
+  );
+}
+.height-max {
+  height: calc(100vh - 76px);
+  background: url("../img/headerBcg.jpeg") center/cover no-repeat fixed;
+  animation: zoom 20s 5s ease infinite;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.16) translateX(-5%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.header h5 {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 0.3rem solid var(--mainBlue);
+}
+.header h2:nth-of-type(1) {
+  color: rgb(255, 115, 0);
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+@media screen and (min-width: 768px) {
+  .header h2:nth-of-type(1) {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .header h2 {
+    font-size: 1.4rem;
+  }
+}
+/* skills */
+.bg-title {
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  clip-path: polygon(50% 0%, 100% 0, 100% 0, 93% 100%, 0 100%, 0 100%, 8% 1%);
+}
+.line {
+  width: 50%;
+  height: 3px;
+  background-color: var(--mainBlue);
+  margin: 10px auto;
+}
+.single a {
+  font-size: 3rem;
+  color: var(--mainYellow);
+  background-color: var(--mainGrey);
+}
+/* preloader */
+.preloader {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 3;
+  background-color: var(--mainWhite);
+}
+.hidepreloader {
+  display: none !important;
+}
+/* inventory */
+.inventory {
+  background: var(--mainGrey);
+}
+/* post */
+.price {
+  cursor: pointer;
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+  transition: all 0.5s ease;
+}
+.price:hover {
+  clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+}
+/* question */
+.question-container {
+  background: url("../img/questionBcg.jpeg") center/cover no-repeat fixed;
+}
+.question:nth-of-type(1) {
+  background-color: rgba(79, 109, 122, 0.75);
+}
+.question:nth-of-type(2) {
+  background-color: rgba(277, 181, 5, 0.75);
+}
+.question a {
+  font-size: 40px;
+  transition: all 1s ease;
+}
+.question a:hover {
+  color: #007bff;
+  transform: translateY(-20px);
+}
+/* features */
+.features {
+  background-color: var(--mainGrey);
+}
+.feature div {
+  background-color: var(--mainWhite);
+  opacity: 0.5;
+  border-radius: 0.5rem;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+.feature div:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.feature div span {
+  font-size: 1.5rem;
+}
+.feature-img {
+  position: relative;
+  background-color: var(--mainBlue);
+  overflow: hidden;
+}
+.feature-img a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  color: var(--mainBlack);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+.feature-img:hover a {
+  opacity: 1;
+}
+.feature-img a:hover {
+  color: var(--mainWhite);
+}
+.feature-img img {
+  transition: all 1s ease-in-out;
+}
+.feature-img:hover img {
+  transform: scale(1.3);
+  opacity: 0.3;
+}
+/* gallery */
+.gallery-item {
+  background: var(--mainYellow);
+  position: relative;
+}
+.gallery-item img {
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.gallery-item:hover img {
+  opacity: 0.5;
+}
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainWhite);
+  outline-offset: -2rem;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.gallery-item:hover::after {
+  transform: scale(1);
+}
+/* contact */
+.contact {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/headerBcg.jpeg") center/cover fixed;
+}
+.contact-box input::placeholder {
+  color: var(--mainYellow);
+}
+.contact-box input {
+  background-color: transparent !important;
+  color: var(--mainYellow) !important;
+  border-color: var(--mainYellow);
+  font-size: 1.5rem;
+}
+.contact-box input:focus {
+  border-color: var(--mainYellow);
+}
+.contact-box button {
+  letter-spacing: 1.4px;
+}
+.contact-box button:hover {
+  color: var(--mainWhite);
+}
+/* services */
+.services-content {
+  position: relative;
+  min-height: 85vh;
+  min-width: 95vw;
+  margin: 0 auto;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -2;
+}
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overaly {
+  position: absolute;
+  inset: 0 0;
+  background-color: var(--transparentBlue);
+  z-index: -1;
+}
+.service-item {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  transition: all 1s ease-in-out;
+}
+.service-item:hover {
+  padding-left: 2.2rem !important;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}
+.service-item span {
+  color: var(--mainYellow);
+  font-size: 4rem;
+}
+/* customer */
+.customer-body {
+  margin-top: -4rem;
+}
+.customer-body span {
+  font-size: 2rem;
+}
+.customer-body img {
+  border: 0.4rem solid var(--mainWhite);
+}
+.customer-body p {
+  max-width: 90%;
+}
+/* footer */
+.footer-social a {
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+.footer-social a:hover {
+  color: var(--mainBlue) !important;
+}
+/* REM values to target root element 1REM = 16px */

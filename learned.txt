@@ -1,0 +1,14 @@
+********************* چیزهایی که یاد گرفتی ************************************************
+1.clip-path , outline-offset
+2.glyphicon (all.css & all.js)
+3.navbar-expanded
+4.you must use row class in parent for col childs 
+ NOTICE: if u want use container class must add div with row class in div with container class 
+5.cards
+6.using fixed position for preloader and use top:0; left:0;
+7.using absolute position and top:50%; left:50%; transform(-50%,-50%) for set item mid
+8.use linear-gradient & background-img both in background
+ EXP: background: linear-gradient(....) , url('...')
+  must use comma(,) after linear-gradient
+9.using animation for scale and translateX together
+10.using class fa-fw for solve glyphicon with problem
